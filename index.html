@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Training Management Info System</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- PROFILE -->
+  <div class="profile-box">
+    <div class="profile-header">
+      <svg class="profile-icon" viewBox="0 0 24 24">
+        <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/>
+      </svg>
+      <span class="profile-name">MARY ANN BALOLONG URBANO</span>
+    </div>
+
+    <div class="profile-row">
+      <div class="label">Date of Birth</div>
+      <div class="value">11/20/1990</div>
+    </div>
+    <div class="profile-row">
+      <div class="label">Sex</div>
+      <div class="value">Female</div>
+    </div>
+    <div class="profile-row">
+      <div class="label">Nationality</div>
+      <div class="value">FILIPINO</div>
+    </div>
+    <div class="profile-row">
+      <div class="label">Birthplace</div>
+      <div class="value">Dagupan City, Pangasinan</div>
+    </div>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab-btn active" onclick="openTab(event,'training')">Training</button>
+    <button class="tab-btn" onclick="openTab(event,'assessment')">Assessment</button>
+    <button class="tab-btn" onclick="openTab(event,'renewal')">Renewal</button>
+  </div>
+
+  <!-- TRAINING -->
+  <div id="training" class="tab-content active">
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Region</th>
+            <th>Province</th>
+            <th>School</th>
+            <th>Qualification</th>
+            <th>Schedule</th>
+            <th>Trainer</th>
+            <th>Scholarship</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Region I - Ilocos</td>
+            <td>Pangasinan</td>
+            <td>Savant Sage Institute Inc.</td>
+            <td>Food and Beverage Services NC II</td>
+            <td>11/28/2025 – 1/27/2026</td>
+            <td>Angelica Joy E. Castro</td>
+            <td>TWSP</td>
+            <td class="completed">Completed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ASSESSMENT -->
+  <div id="assessment" class="tab-content">
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Region</th>
+            <th>Province</th>
+            <th>Assessment Center</th>
+            <th>Qualification</th>
+            <th>Schedule</th>
+            <th>Assessment Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Region I - Ilocos</td>
+            <td>Pangasinan</td>
+            <td>SAVANT SAGE INSTITUTE INC.</td>
+            <td>Food and Beverage Services NC II</td>
+            <td>2/1/2026</td>
+            <td>
+              <span class="result-label">Assessment Result :</span>
+              <span class="competent">Competent</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- RENEWAL -->
+  <div id="renewal" class="tab-content">
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Region</th>
+            <th>Province</th>
+            <th>Qualification</th>
+            <th>Valid Until</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Region I - Ilocos</td>
+            <td>Pangasinan</td>
+            <td>Food and Beverage Services NC II</td>
+            <td>2/28/2031</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function openTab(evt, tabId) {
+  document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+
+  document.getElementById(tabId).classList.add('active');
+  evt.currentTarget.classList.add('active');
+}
+</script>
+
+</body>
+</html>
