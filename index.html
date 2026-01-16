@@ -5,8 +5,11 @@
   <title>Student Training Management Info System</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- BOOTSTRAP 5 CSS -->
+  <!-- BOOTSTRAP 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="style.css">
 
   <!-- FAVICON -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -19,42 +22,63 @@
 <div class="container-fluid p-3">
 
   <!-- PROFILE CARD -->
-  <div class="card shadow-sm mb-3">
-    <div class="card-body bg-info-subtle">
+  <div class="card shadow-sm mb-3 profile-card">
 
-      <div class="d-flex align-items-center mb-3">
-        <svg width="20" height="20" fill="#0d6efd" viewBox="0 0 24 24" class="me-2">
+    <!-- HEADER (SKY BLUE LANG) -->
+    <div class="card-header profile-header-bar">
+      <div class="d-flex align-items-center">
+        <svg width="18" height="18" viewBox="0 0 24 24" class="me-2 profile-icon">
           <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/>
         </svg>
-        <h5 class="mb-0 text-primary fw-bold">MARY ANN BALOLONG URBANO</h5>
+        <span class="profile-name-text">
+          MARY ANN BALOLONG URBANO
+        </span>
       </div>
-
-      <div class="row border-top pt-2">
-        <div class="col-12 col-md-6 py-1"><strong>Date of Birth:</strong> 11/20/1990</div>
-        <div class="col-12 col-md-6 py-1"><strong>Sex:</strong> Female</div>
-        <div class="col-12 col-md-6 py-1"><strong>Nationality:</strong> FILIPINO</div>
-        <div class="col-12 col-md-6 py-1"><strong>Birthplace:</strong> Dagupan City, Pangasinan</div>
-      </div>
-
     </div>
+
+    <!-- BODY (WHITE) -->
+    <div class="card-body profile-body">
+      <div class="row">
+        <div class="col-12 py-2 border-bottom">
+          <strong>Date of Birth:</strong> 11/20/1990
+        </div>
+        <div class="col-12 py-2 border-bottom">
+          <strong>Sex:</strong> Female
+        </div>
+        <div class="col-12 py-2 border-bottom">
+          <strong>Nationality:</strong> FILIPINO
+        </div>
+        <div class="col-12 py-2">
+          <strong>Birthplace:</strong> Dagupan City, Pangasinan
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <!-- NAV TABS -->
-  <ul class="nav nav-tabs" role="tablist">
+  <ul class="nav nav-tabs">
     <li class="nav-item">
-      <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#training">Training</button>
+      <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#training">
+        Training
+      </button>
     </li>
     <li class="nav-item">
-      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#assessment">Assessment</button>
+      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#assessment">
+        Assessment
+      </button>
     </li>
     <li class="nav-item">
-      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#renewal">Renewal</button>
+      <button class="nav-link" data-bs-toggle="tab" data-bs-target="#renewal">
+        Renewal
+      </button>
     </li>
   </ul>
 
+  <!-- TAB CONTENT -->
   <div class="tab-content border border-top-0 bg-white p-3">
 
-    <!-- TRAINING TAB -->
+    <!-- TRAINING -->
     <div class="tab-pane fade show active" id="training">
       <div class="table-responsive">
         <table class="table table-bordered table-sm align-middle">
@@ -86,7 +110,7 @@
       </div>
     </div>
 
-    <!-- ASSESSMENT TAB -->
+    <!-- ASSESSMENT -->
     <div class="tab-pane fade" id="assessment">
       <div class="table-responsive">
         <table class="table table-bordered table-sm align-middle">
@@ -114,7 +138,7 @@
       </div>
     </div>
 
-    <!-- RENEWAL TAB -->
+    <!-- RENEWAL -->
     <div class="tab-pane fade" id="renewal">
       <div class="table-responsive">
         <table class="table table-bordered table-sm align-middle">
