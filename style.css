@@ -1,34 +1,44 @@
-/* =========================
-   GLOBAL
-========================= */
+/* GLOBAL */
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont,
                "Segoe UI", Roboto, Arial, sans-serif;
-  background-color: #f4f6f8;
 }
 
-/* =========================
-   PROFILE CARD
-========================= */
-.card {
+/* PROFILE CARD */
+.profile-card {
   border-radius: 12px;
+  overflow: hidden;
 }
 
-.card-body {
-  border-radius: 12px;
+/* SKY BLUE HEADER (TESDA STYLE) */
+.profile-header-bar {
+  background-color: #d9f3fb;
+  border-bottom: 1px solid #c6e6f2;
+  padding: 12px 16px;
 }
 
-/* Profile header */
-.card-body svg {
-  flex-shrink: 0;
+/* NAME */
+.profile-name-text {
+  color: #0d6efd;
+  font-weight: 600;
+  font-size: 15px;
 }
 
-/* =========================
-   TABS
-========================= */
+/* ICON */
+.profile-icon {
+  fill: #0d6efd;
+}
+
+/* BODY */
+.profile-body {
+  background-color: #ffffff;
+  font-size: 14px;
+}
+
+/* TABS */
 .nav-tabs .nav-link {
-  color: #555;
   font-weight: 500;
+  color: #555;
 }
 
 .nav-tabs .nav-link.active {
@@ -36,16 +46,10 @@ body {
   font-weight: 600;
 }
 
-/* =========================
-   TABLES
-========================= */
-.table {
-  margin-bottom: 0;
-}
-
+/* TABLE */
 .table th {
-  white-space: nowrap;
   font-size: 14px;
+  white-space: nowrap;
 }
 
 .table td {
@@ -53,53 +57,14 @@ body {
   vertical-align: middle;
 }
 
-/* Result styles */
-.table td.text-success {
-  font-weight: 600;
-}
-
-/* =========================
-   BADGES
-========================= */
-.badge {
-  font-size: 13px;
-  padding: 6px 10px;
-  border-radius: 6px;
-}
-
-/* =========================
-   MOBILE OPTIMIZATION
-========================= */
+/* MOBILE TWEAKS */
 @media (max-width: 768px) {
-
-  h5 {
-    font-size: 16px;
+  .profile-name-text {
+    font-size: 14px;
   }
 
   .table th,
   .table td {
     font-size: 13px;
   }
-
-  .badge {
-    font-size: 12px;
-  }
-
-}
-
-/* =========================
-   VERY SMALL DEVICES
-========================= */
-@media (max-width: 480px) {
-
-  .nav-tabs .nav-link {
-    font-size: 13px;
-    padding: 6px 10px;
-  }
-
-  .table th,
-  .table td {
-    font-size: 12px;
-  }
-
 }
